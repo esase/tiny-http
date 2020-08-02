@@ -53,6 +53,8 @@ helpful for the routing handling.
 
   echo $request->getRequest(); // prints the current request like: "users", "user import 1", etc
   echo $request->getMethod(); // prints the current method like: "CONSOLE"
+  
+  // example of calling: php index.php user import 1
 ```
 
 **We even can make create a universal way for handling the request, and don't care if it `CLI` or `HTTP` mode**
