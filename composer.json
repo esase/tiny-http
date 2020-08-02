@@ -1,10 +1,12 @@
 {
   "name": "esase/tiny-http",
+  "type": "library",
   "description": "An abstraction layer for http requests and responses",
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "keywords": [
     "esase",
     "tinyframework",
+    "framework",
     "lightweight",
     "mvc",
     "http",
@@ -13,6 +15,12 @@
   ],
   "support": {
   },
+  "authors": [
+    {
+        "name": "Alex Ermashev",
+        "email": "alexermashev@gmail.com"
+    }
+  ],
   "require": {
     "php": "^7.4 || ^8.0"
   },
@@ -33,5 +41,6 @@
   "scripts": {
     "test": "phpunit --colors=always",
     "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
-  }
+  },
+  "minimum-stability": "dev"
 }
