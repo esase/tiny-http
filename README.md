@@ -57,7 +57,7 @@ helpful for the routing handling.
   // example of calling: php index.php user import 1
 ```
 
-**We even can create a universal way for handling the request, and don't care if it `CLI` or `HTTP` mode**
+**We even can create a universal way for handling requests, and don't care if it `CLI` or `HTTP` mode**
 
 ```php
 <?php 
