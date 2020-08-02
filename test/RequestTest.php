@@ -63,6 +63,7 @@ class RequestTest extends TestCase
             ]
         );
         $this->assertEquals($id, $request->getParam('id'));
+        $this->assertEquals(1, count($request->getParams()));
     }
 
     public function testGetParamMethodUsingDefaultValues()
