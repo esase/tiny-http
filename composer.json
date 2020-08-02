@@ -1,7 +1,7 @@
 {
   "name": "esase/tiny-http",
   "type": "library",
-  "description": "An abstraction layer for http requests and responses",
+  "description": "An abstraction layer component for http requests and responses",
   "license": "MIT",
   "keywords": [
     "esase",
