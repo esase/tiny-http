@@ -6,6 +6,8 @@ cache:
 
 php:
   - 7.4
+  - hhvm
+  - nightly
 
 install:
   - travis_retry composer install --no-interaction --no-suggest
