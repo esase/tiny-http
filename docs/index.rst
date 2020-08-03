@@ -3,7 +3,7 @@
 HTTP
 ====
 
-An abstraction layer for http and console requests and responses, may be used for internal communication in your application
+An abstraction layer for http and console requests and responses, may be used for internal communication in your application.
 
 Installation
 ------------
