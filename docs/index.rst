@@ -1,4 +1,4 @@
-.. _index-label:
+.. _index-http-label:
 
 HTTP
 ====
