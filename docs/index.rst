@@ -18,10 +18,12 @@ Run the following to install this library:
 Request
 -------
 
-The Request object is responsible for managing the input state both in the `HTTP` and `CLI` modes.
+The :code:`Request` object is responsible for managing the input state both in the `HTTP` and `CLI` modes.
 It provides an abstraction layer for getting input data like: a current request and the request's method.
 
-**Let consider an example for the HTTP mode:**
+------------
+HTTP example
+------------
 
 .. code-block:: php
 
@@ -37,11 +39,13 @@ It provides an abstraction layer for getting input data like: a current request 
       echo $request->getRequest(); // prints the current request like: "/", "/users", "/documents/view", etc
       echo $request->getMethod(); // prints the current method like: "GET", "POST", "DELETE", etc
 
-PS: The **RequestHttpParams** ignores any http `GET` parameters and returns only the request's path.
-E.g **/users/?param=1** would be **/users**, also it removes sub directory path - **sub_directory/users/** would be **/users**, it very
+PS: The :code:`RequestHttpParams` ignores any http `GET` parameters and returns only the request's path.
+E.g :code:`/users/?param=1` would be :code:`/users`, also it removes sub directory path - :code:`sub_directory/users/` would be just :code:`/users`, it very
 helpful for the routing handling.
 
-**Let consider an example for the CLI mode:**
+-----------
+CLI example
+-----------
 
 .. code-block:: php
 
@@ -59,7 +63,11 @@ helpful for the routing handling.
 
       // example of calling: php index.php user import 1
 
-**We even can create a universal way for handling requests, and don't care if it CLI or HTTP mode**
+-----------------
+Universal example
+-----------------
+
+In this case we don't really care about the current mode, we just work with the abstraction.
 
 .. code-block:: php
 
