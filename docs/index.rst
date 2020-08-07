@@ -77,7 +77,7 @@ In this case we don't really care about the current mode, we just work with the 
         use Tiny\Http\RequestCliParams;
         use Tiny\Http\RequestHttpParams;
 
-        // a good tip: the should be placed in a factory
+        // a good tip: this should be placed in a factory
         $request = new Request((php_sapi_name() === 'cli'
             ? new RequestCliParams($_SERVER)
             : new RequestHttpParams($_SERVER)
@@ -161,7 +161,7 @@ If we don't need to know about the current context we can build an abstraction l
         use Tiny\Http\ResponseHttp;
         use Tiny\Http\ResponseHttpUtils;
 
-        // a good tip: the should be placed in a factory
+        // a good tip: this should be placed in a factory
         $response = (php_sapi_name() === 'cli'
             ? new ResponseCli()
             : new ResponseHttp(
