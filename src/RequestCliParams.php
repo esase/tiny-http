@@ -17,7 +17,7 @@ class RequestCliParams implements RequestSystemParamsInterface
     /**
      * @var array
      */
-    private $server;
+    private array $server;
 
     /**
      * RequestCliParams constructor.

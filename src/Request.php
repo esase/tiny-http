@@ -25,26 +25,14 @@ class Request
     const METHOD_DELETE = 'DELETE';
 
     /**
-     * @var array
-     */
-    public $allowedMethods
-        = [
-            self::METHOD_CONSOLE,
-            self::METHOD_POST,
-            self::METHOD_GET,
-            self::METHOD_PUT,
-            self::METHOD_DELETE,
-        ];
-
-    /**
      * @var RequestSystemParamsInterface
      */
-    private $requestSystemParams;
+    private RequestSystemParamsInterface $requestSystemParams;
 
     /**
      * @var array
      */
-    private $params = [];
+    private array $params = [];
 
     /**
      * Request constructor.
