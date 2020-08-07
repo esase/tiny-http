@@ -76,9 +76,9 @@ class ResponseHttpTest extends TestCase
         return [
             [
                 200,
-                '{"name": "tes"}',
+                '{"name": "test"}',
                 'application/json',
-                '{"name": "tes"}',
+                '{"name": "test"}',
                 ['Content-Type: application/json; charset=utf-8']
             ],
             [
