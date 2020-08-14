@@ -24,7 +24,7 @@ class RequestHttpParams implements RequestSystemParamsInterface
     /**
      * RequestHttpParams constructor.
      *
-     * @param  array  $server
+     * @param array $server
      */
     public function __construct(array $server)
     {

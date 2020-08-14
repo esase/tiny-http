@@ -24,6 +24,8 @@ class Request
 
     const METHOD_DELETE = 'DELETE';
 
+    const METHOD_OPTIONS = 'OPTIONS';
+
     /**
      * @var RequestSystemParamsInterface
      */
@@ -37,7 +39,7 @@ class Request
     /**
      * Request constructor.
      *
-     * @param  RequestSystemParamsInterface  $requestSystemParams
+     * @param RequestSystemParamsInterface $requestSystemParams
      */
     public function __construct(
         RequestSystemParamsInterface $requestSystemParams
@@ -54,6 +56,54 @@ class Request
     }
 
     /**
+     * @return bool
+     */
+    public function isConsole(): bool
+    {
+        return $this->requestSystemParams->getMethod() === self::METHOD_CONSOLE;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isGet(): bool
+    {
+        return $this->requestSystemParams->getMethod() === self::METHOD_GET;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPost(): bool
+    {
+        return $this->requestSystemParams->getMethod() === self::METHOD_POST;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPut(): bool
+    {
+        return $this->requestSystemParams->getMethod() === self::METHOD_PUT;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isDelete(): bool
+    {
+        return $this->requestSystemParams->getMethod() === self::METHOD_DELETE;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isOptions(): bool
+    {
+        return $this->requestSystemParams->getMethod() === self::METHOD_OPTIONS;
+    }
+
+    /**
      * @return string
      */
     public function getRequest(): string
@@ -62,7 +112,7 @@ class Request
     }
 
     /**
-     * @param  array  $params
+     * @param array $params
      *
      * @return $this
      */
@@ -82,8 +132,8 @@ class Request
     }
 
     /**
-     * @param  string  $name
-     * @param  mixed   $defaultValue
+     * @param string $name
+     * @param mixed  $defaultValue
      *
      * @return mixed
      */

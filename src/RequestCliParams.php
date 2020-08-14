@@ -22,7 +22,7 @@ class RequestCliParams implements RequestSystemParamsInterface
     /**
      * RequestCliParams constructor.
      *
-     * @param  array  $server
+     * @param array $server
      */
     public function __construct(array $server)
     {

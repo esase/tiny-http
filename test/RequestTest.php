@@ -19,6 +19,90 @@ use Tiny\Http\RequestSystemParamsInterface;
 class RequestTest extends TestCase
 {
 
+    public function testIsConsoleMethod()
+    {
+        $systemParamsMock = $this->createMock(
+            RequestSystemParamsInterface::class
+        );
+        $systemParamsMock->expects($this->once())
+            ->method('getMethod')
+            ->willReturn('CONSOLE');
+
+        $request = new Request($systemParamsMock);
+
+        $this->assertTrue($request->isConsole());
+    }
+
+    public function testIsGetMethod()
+    {
+        $systemParamsMock = $this->createMock(
+            RequestSystemParamsInterface::class
+        );
+        $systemParamsMock->expects($this->once())
+            ->method('getMethod')
+            ->willReturn('GET');
+
+        $request = new Request($systemParamsMock);
+
+        $this->assertTrue($request->isGet());
+    }
+
+    public function testIsPostMethod()
+    {
+        $systemParamsMock = $this->createMock(
+            RequestSystemParamsInterface::class
+        );
+        $systemParamsMock->expects($this->once())
+            ->method('getMethod')
+            ->willReturn('POST');
+
+        $request = new Request($systemParamsMock);
+
+        $this->assertTrue($request->isPost());
+    }
+
+    public function testIsPutMethod()
+    {
+        $systemParamsMock = $this->createMock(
+            RequestSystemParamsInterface::class
+        );
+        $systemParamsMock->expects($this->once())
+            ->method('getMethod')
+            ->willReturn('PUT');
+
+        $request = new Request($systemParamsMock);
+
+        $this->assertTrue($request->isPut());
+    }
+
+    public function testIsDeleteMethod()
+    {
+        $systemParamsMock = $this->createMock(
+            RequestSystemParamsInterface::class
+        );
+        $systemParamsMock->expects($this->once())
+            ->method('getMethod')
+            ->willReturn('DELETE');
+
+        $request = new Request($systemParamsMock);
+
+        $this->assertTrue($request->isDelete());
+    }
+
+    public function testIsOptionsMethod()
+    {
+        $systemParamsMock = $this->createMock(
+            RequestSystemParamsInterface::class
+        );
+        $systemParamsMock->expects($this->once())
+            ->method('getMethod')
+            ->willReturn('OPTIONS');
+
+        $request = new Request($systemParamsMock);
+
+        $this->assertTrue($request->isOptions());
+    }
+
     public function testGetMethod()
     {
         $method = 'GET';
