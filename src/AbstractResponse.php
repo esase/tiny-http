@@ -24,7 +24,7 @@ class AbstractResponse
 
     const RESPONSE_TYPE_TEXT = 'text/plain';
     const RESPONSE_TYPE_HTML = 'text/html';
-    const RESPONSE_TYPE_JSON = 'application/json';
+    const RESPONSE_TYPE_JSON = 'application/json'; 
 
     /**
      * @var int
