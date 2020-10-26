@@ -19,13 +19,15 @@ class ResponseHttpUtils
      */
     private array $defaultHeaders
         = [
-            AbstractResponse::RESPONSE_OK             => 'HTTP/1.1 200 OK',
-            AbstractResponse::RESPONSE_CREATED        => 'HTTP/1.1 201 OK',
-            AbstractResponse::RESPONSE_NO_CONTENT     => 'HTTP/1.1 204 OK',
-            AbstractResponse::RESPONSE_NOT_FOUND      => 'HTTP/1.1 404 Not Found',
-            AbstractResponse::RESPONSE_BAD_REQUEST    => 'HTTP/1.1 400 Bad Request',
-            AbstractResponse::RESPONSE_CONFLICT       => 'HTTP/1.1 409 Conflict',
-            AbstractResponse::RESPONSE_INTERNAL_ERROR => "HTTP/1.1 500 Internal Server Error",
+            AbstractResponse::RESPONSE_OK              => 'HTTP/1.1 200 OK',
+            AbstractResponse::RESPONSE_CREATED         => 'HTTP/1.1 201 OK',
+            AbstractResponse::RESPONSE_NO_CONTENT      => 'HTTP/1.1 204 OK',
+            AbstractResponse::RESPONSE_BAD_REQUEST     => 'HTTP/1.1 400 Bad Request',
+            AbstractResponse::RESPONSE_UNAUTHORIZED    => 'HTTP/1.1 401 Unauthorized',
+            AbstractResponse::RESPONSE_NOT_FOUND       => 'HTTP/1.1 404 Not Found',
+            AbstractResponse::RESPONSE_NOT_ALLOWED     => 'HTTP/1.1 405 Method Not Allowed',
+            AbstractResponse::RESPONSE_CONFLICT        => 'HTTP/1.1 409 Conflict',
+            AbstractResponse::RESPONSE_INTERNAL_ERROR  => 'HTTP/1.1 500 Internal Server Error',
         ];
 
     /**
