@@ -61,4 +61,12 @@ class RequestHttpParams implements RequestSystemParamsInterface
         return $request ?: '/';
     }
 
+    /**
+     * @return mixed
+     */
+    public function getRawRequest()
+    {
+        return file_get_contents('php://input');
+    }
+ 
 }
