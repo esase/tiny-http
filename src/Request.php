@@ -112,6 +112,18 @@ class Request
     }
 
     /**
+     * @return mixed
+     */
+    public function getRawRequest($isJson = true)
+    {
+        $rawRequest = $this->requestSystemParams->getRawRequest();
+
+        return $isJson && is_string($rawRequest)
+            ? json_decode($rawRequest, true)
+            : $rawRequest;
+    }
+ 
+    /**
      * @param array $params
      *
      * @return $this
