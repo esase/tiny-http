@@ -17,8 +17,10 @@ class AbstractResponse
     const RESPONSE_OK = 200;
     const RESPONSE_CREATED = 201;
     const RESPONSE_NO_CONTENT = 204;
-    const RESPONSE_NOT_FOUND = 404;
     const RESPONSE_BAD_REQUEST = 400;
+    const RESPONSE_UNAUTHORIZED = 401;
+    const RESPONSE_NOT_FOUND = 404;
+    const RESPONSE_NOT_ALLOWED = 405;
     const RESPONSE_CONFLICT = 409;
     const RESPONSE_INTERNAL_ERROR = 500;
 
