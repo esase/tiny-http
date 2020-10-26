@@ -24,4 +24,9 @@ interface RequestSystemParamsInterface
      */
     public function getRequest(): string;
 
+    /**
+     * @return mixed
+     */
+    public function getRawRequest();
+
 }
