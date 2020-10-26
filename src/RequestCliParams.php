@@ -56,4 +56,12 @@ class RequestCliParams implements RequestSystemParamsInterface
         return $request;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getRawRequest()
+    {
+        return $arguments = $this->server['argv'] ?? [];
+    }
+
 }
