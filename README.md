@@ -40,14 +40,14 @@ e.g:
 
 ```
 
-In code snippet above the `Request` object extracts a requests method and a request string from a super global array of `[$_SERVER](https://www.php.net/manual/en/reserved.variables.server.php)`.
+In code snippet above the `Request` object extracts a requests method and a request string from a super global array of [$_SERVER](https://www.php.net/manual/en/reserved.variables.server.php).
 You should not be worried which mode is activated now `CLI` or the `Http` both follow to a one interface. 
 
 ## Response object
 
 The `Response` object mostly used to generate a final result which will be returned back to a `web server` or `command line` and
 it usually keeps `response code`, `response type` and the `response` it self.
-The response object could be modified by controllers (if we are following  by `[MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)` structure or somewhere else like `[Middleware](https://en.wikipedia.org/wiki/Middleware)`)
+The response object could be modified by controllers (if we are following  by [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) structure or somewhere else like [Middleware](https://en.wikipedia.org/wiki/Middleware)
 
 ```php
 
