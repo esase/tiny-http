@@ -4,7 +4,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/esase/tiny-http/badge.svg?branch=master)](https://coveralls.io/github/esase/tiny-http?branch=master)
 
 
-
 Basically each web application starts with an `INPUT` (an incoming request which would be: `GET`, `POST`, etc) 
 and an `OUTPUT` a final response (`JSON`, `HTML`, `XML`, etc).
 
@@ -16,7 +15,7 @@ Due to the simple interface of the package it can be integrated to any web appli
 ## Request object
 
 The request would be either an `http` query (a query received from a `web server`) 
-or received from a command line interface (`CLI`)
+or received from a command line interface ([CLI](https://en.wikipedia.org/wiki/Command-line_interface))
 
 e.g:
 
@@ -41,14 +40,14 @@ e.g:
 
 ```
 
-In code snippet above the `Request` object extracts a requests method and a request string from a super global array of `$_SERVER`.
+In code snippet above the `Request` object extracts a requests method and a request string from a super global array of `[$_SERVER](https://www.php.net/manual/en/reserved.variables.server.php)`.
 You should not be worried which mode is activated now `CLI` or the `Http` both follow to a one interface. 
 
 ## Response object
 
 The `Response` object mostly used to generate a final result which will be returned back to a `web server` or `command line` and
-it usually keeps `response code`, `response type` and the `response` it self; The response object could be modified by controllers (if we are following 
-by `MVC` structure or somewhere else like `Middleware`)
+it usually keeps `response code`, `response type` and the `response` it self.
+The response object could be modified by controllers (if we are following  by `[MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)` structure or somewhere else like `[Middleware](https://en.wikipedia.org/wiki/Middleware)`)
 
 ```php
 
