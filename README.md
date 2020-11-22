@@ -15,8 +15,7 @@ Due to the simple interface of the package it can be integrated to any web appli
 
 Let's check a look it closer:
 
-Request
--------
+## Request object
 
 The request would be either an `http` query (a query received from a `web server`) 
 or received from a command line interface (`CLI`)
@@ -47,8 +46,7 @@ e.g:
 In code snippet above the `Request` object extracts a requests method and a request string from a super global array of `$_SERVER`.
 You should not be worried which mode is activated now `CLI` or the `Http` both follow to a one interface. 
 
-Response
---------
+## Response object
 
 The `Response` object mostly used to generate a final result which will be returned back to a `web server` or `command line` and
 it usually keeps `response code`, `response type` and the `response` it self; The response object could be modified by controllers (if we are following 
@@ -75,8 +73,9 @@ by `MVC` structure or somewhere else like `Middleware`)
 
     // we don't care about neither "CLI" nor "HTTP", we just print the value
     echo $response->getResponseForDisplaying();
+```
 
-Under the hood the `Response` object uses `headers` (for the `http` mode ) which will be sending depending on your response type.
+Under the hood the `Response` object uses `headers` (for the `http` mode ) which will be sending depending on your response type read more in the documentation.
 
 ## Installation
 
