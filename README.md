@@ -72,7 +72,7 @@ The response object could be modified by controllers (if we are following  by [M
     echo $response->getResponseForDisplaying();
 ```
 
-Under the hood the `Response` object uses `headers` (for the `http` mode ) which will be sending depending on your response type read more in the documentation.
+Under the hood the `Response` object uses `headers` (for the `http` mode ) which will be sending depending on your response type, please read more in the documentation.
 
 ## Installation
 
