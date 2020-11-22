@@ -13,8 +13,6 @@ your application a possibility to manipulate with them during the application's 
 
 Due to the simple interface of the package it can be integrated to any web application.
 
-Let's check a look it closer:
-
 ## Request object
 
 The request would be either an `http` query (a query received from a `web server`) 
